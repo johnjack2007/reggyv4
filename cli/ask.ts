@@ -21,7 +21,12 @@ export async function runAsk(query: string) {
       .select('*')
       .eq('tag', primaryTag)
       .single();
-    if (!error && data) bridgeInfo = data;
+    if (!error && data) {
+      bridgeInfo = data;
+      console.log(`📋 Found bridge info for tag: ${primaryTag}`);
+    } else {
+      console.log(`⚠️ No bridge info found for tag: ${primaryTag}`);
+    }
   }
 
   if (chunks.length > 0) {
@@ -29,7 +34,8 @@ export async function runAsk(query: string) {
     const answer = await synthesizeAnswer(query, chunks, bridgeInfo);
     return { answer, bridgeInfo };
   } else {
-    const fallback = await synthesizeAnswer(query, [], null);
-    return { answer: fallback, bridgeInfo: null };
+    console.log(`📚 No document chunks found, using fallback response`);
+    const fallback = await synthesizeAnswer(query, [], bridgeInfo);
+    return { answer: fallback, bridgeInfo };
   }
 }
