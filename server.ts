@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Mock user endpoint (replace with actual auth logic)
-app.get('/api/get-user', (req, res) => {
+app.get('/api/get-user', (_req, res) => {
   res.json({
     user: {
       id: '1',

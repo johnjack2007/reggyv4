@@ -11,7 +11,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ 
   children, 
-  attribute = 'class', 
+  attribute = 'class' as const, // eslint-disable-line @typescript-eslint/no-unused-vars 
   defaultTheme = 'light', 
   enableSystem = false 
 }: {

@@ -1,4 +1,4 @@
-import fs from 'fs';
+import * as fs from 'fs';
 import { createObjectCsvWriter } from 'csv-writer';
 const logPath = 'data/inquiry_log.csv';
 
