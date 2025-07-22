@@ -1,1 +1,10 @@
- 
+node_modules/
+venv/
+site-packages/
+pdfs/
+data/
+.env
+dist/
+build/
+.DS_Store
+*.log 

@@ -1,0 +1,82 @@
+{
+  "verification_documents": {
+    "follow_ups": [
+      "What specific documents were requested in the verification letter?",
+      "Are you able to provide the requested documentation within the deadline?",
+      "Do you need help obtaining any of the required documents?"
+    ],
+    "recommended_action": "Review the verification letter with the student, identify missing documents, and provide guidance on document submission deadlines and acceptable formats."
+  },
+  "pell_calculation_logic": {
+    "follow_ups": [
+      "What is your family's adjusted gross income (AGI)?",
+      "How many people are in your household?",
+      "How many family members will be enrolled in college?"
+    ],
+    "recommended_action": "Calculate the student's Pell Grant eligibility using the SAI formula and explain how the award amount was determined."
+  },
+  "dependency_override": {
+    "follow_ups": [
+      "What specific circumstances make you unable to contact your parents?",
+      "Do you have documentation supporting your special circumstances?",
+      "Have you attempted to contact your parents through multiple methods?"
+    ],
+    "recommended_action": "Review the student's circumstances against dependency override criteria, request supporting documentation, and initiate the override process if eligible."
+  },
+  "independent_student_criteria": {
+    "follow_ups": [
+      "How old are you?",
+      "Are you married or do you have dependents?",
+      "Are you a veteran or active duty military?"
+    ],
+    "recommended_action": "Determine if the student meets independent status criteria and update their FAFSA accordingly."
+  },
+  "sai_vs_efc_difference": {
+    "follow_ups": [
+      "Are you applying for the 2024-25 or 2025-26 academic year?",
+      "Do you understand the difference between SAI and EFC?",
+      "Have you received your Student Aid Report (SAR)?"
+    ],
+    "recommended_action": "Explain the transition from EFC to SAI, clarify how this affects their aid eligibility, and review their SAR with them."
+  },
+  "verification_tracking_groups": {
+    "follow_ups": [
+      "What verification tracking group were you assigned?",
+      "Have you received a verification letter from your school?",
+      "Do you understand what documents are required for your tracking group?"
+    ],
+    "recommended_action": "Identify the student's verification tracking group, explain the specific requirements, and provide a checklist of needed documents."
+  },
+  "pell_income_thresholds": {
+    "follow_ups": [
+      "What is your family's total income for the base year?",
+      "Are you eligible for means-tested federal benefits?",
+      "Do you have unusual circumstances affecting your income?"
+    ],
+    "recommended_action": "Review income thresholds for Pell Grant eligibility and determine if the student qualifies for automatic zero SAI or maximum Pell Grant."
+  },
+  "zero_sai_vs_partial_sai": {
+    "follow_ups": [
+      "What is your calculated SAI?",
+      "Do you qualify for automatic zero SAI?",
+      "Are you eligible for means-tested federal benefits?"
+    ],
+    "recommended_action": "Explain the difference between zero SAI and partial SAI, determine the student's eligibility for maximum aid, and calculate their expected award."
+  },
+  "fafsa_application_link": {
+    "follow_ups": [
+      "Have you created your FSA ID?",
+      "Do you have all required documents ready?",
+      "Do you need help with any specific FAFSA questions?"
+    ],
+    "recommended_action": "Provide the student with the FAFSA application link, guide them through the FSA ID creation process, and offer assistance with completing the form."
+  },
+  "professional_judgment_scope": {
+    "follow_ups": [
+      "What specific circumstances have changed since you filed your FAFSA?",
+      "Do you have documentation of these changes?",
+      "How do these changes affect your ability to pay for college?"
+    ],
+    "recommended_action": "Evaluate the student's request for professional judgment, determine if circumstances warrant adjustment, and initiate the PJ process if appropriate."
+  }
+} 

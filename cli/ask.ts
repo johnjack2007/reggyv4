@@ -1,7 +1,7 @@
 // File: cli/ask.ts
 import { classifyTags, getEmbedding, retrieveChunks, synthesizeAnswer } from './lib/core';
 import { logInquiry } from './lib/log';
-import bridgeTags from './lib/bridgeTags';
+import supabase from './lib/supabase';
 
 export async function runAsk(query: string) {
   console.log(`\n🔍 Classifying initial question...`);
@@ -12,7 +12,17 @@ export async function runAsk(query: string) {
 
   const embedding = await getEmbedding(query);
   const chunks = await retrieveChunks(embedding, primaryTag);
-  const bridgeInfo = bridgeTags[primaryTag] || null;
+
+  // Fetch bridge info from Supabase
+  let bridgeInfo = null;
+  if (primaryTag) {
+    const { data, error } = await supabase
+      .from('bridge_tags')
+      .select('*')
+      .eq('tag', primaryTag)
+      .single();
+    if (!error && data) bridgeInfo = data;
+  }
 
   if (chunks.length > 0) {
     console.log(`📚 Retrieved ${chunks.length} supporting document(s)`);
